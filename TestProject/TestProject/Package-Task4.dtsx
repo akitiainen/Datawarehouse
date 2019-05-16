@@ -1,0 +1,349 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/19/2019 10:54:11 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-STD5L9S"
+  DTS:CreatorName="DESKTOP-STD5L9S\Aki"
+  DTS:DTSID="{532940DC-1E94-4E87-AE1A-F7D33FC84B08}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="Package-Task4"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{6C464C29-FF79-469D-A5A5-3165A79997D2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1BDC6572-E63B-43A6-95E6-1A96A719A3A2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import persons from SQL Server PersonTestDB to SQL Server SSIS"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Person]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{69AC5659-A372-45F5-91DA-701F58FBA150}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[DESKTOP-STD5L9S_SQLEXPRESS.PersonTestDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[City]"
+                      name="City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateOfBirth]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateOfBirth]"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateOfBirth]"
+                      name="DateOfBirth"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sex]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
+                      length="10"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Sex]"
+                      name="Sex"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[EyeColor]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EyeColor]"
+                      length="10"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[EyeColor]"
+                      name="EyeColor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShoeSize]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShoeSize]"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[ShoeSize]"
+                      name="ShoeSize"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Height]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Height]"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].Columns[Height]"
+                      name="Height"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Id]"
+                      dataType="i8"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[City]"
+                      dataType="wstr"
+                      length="50"
+                      name="City" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateOfBirth]"
+                      dataType="dbDate"
+                      name="DateOfBirth" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Sex]"
+                      dataType="wstr"
+                      length="10"
+                      name="Sex" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EyeColor]"
+                      dataType="wstr"
+                      length="10"
+                      name="EyeColor" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ShoeSize]"
+                      dataType="i4"
+                      name="ShoeSize" />
+                    <externalMetadataColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Height]"
+                      dataType="i4"
+                      name="Height" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      dataType="i8"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[City]"
+                      name="City" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateOfBirth]"
+                      dataType="dbDate"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateOfBirth]"
+                      name="DateOfBirth" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sex]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Sex]"
+                      name="Sex" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EyeColor]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EyeColor]"
+                      name="EyeColor" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ShoeSize]"
+                      dataType="i4"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ShoeSize]"
+                      name="ShoeSize" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Height]"
+                      dataType="i4"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Height]"
+                      name="Height" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="393.6,41.6"
+          Id="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS"
+          TopLeft="134.285716572586,75.247059878841" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source"
+          TopLeft="64.0000010899135,33.0352945809546" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import persons from SQL Server PersonTestDB to SQL Server SSIS\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

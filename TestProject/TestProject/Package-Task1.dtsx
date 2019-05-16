@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-STD5L9S"
   DTS:CreatorName="DESKTOP-STD5L9S\Aki"
-  DTS:DTSID="{882CB55C-04C4-42F8-BB51-2CC2EBFD28B3}"
+  DTS:DTSID="{FE314C0F-00D1-48A8-BA44-C07259D76FCD}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1100.123"
   DTS:LocaleID="8192"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="Package-Task1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{6D173026-DF07-42F6-B1F1-14C45C5CCA87}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{2EB27F96-B4FB-43E3-8AE4-CA81165CADFA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\dev\Liiketoiminnan-kehittäminen\Datawarehouse\Excel\ListOfPersons1.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\dev\Liiketoiminnan-kehittäminen\Datawarehouse\Excel\ListOfPersons1.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -532,15 +532,15 @@
     design-time-name="Package\Import persons to excel">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\Import persons to excel\Person Table"
-          TopLeft="133.714287991426,53.8352948726668" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\Import persons to excel\List of Persons Workbook"
           TopLeft="239.428575506016,168.847061191546" />
+        <NodeLayout
+          Size="139.2,41.6"
+          Id="Package\Import persons to excel\Person Table"
+          TopLeft="133.714287991426,53.8352948726668" />
         <EdgeLayout
           Id="Package\Import persons to excel.Paths[OLE DB Source Output]"
           TopLeft="203.314287991426,95.4352948726668">
@@ -572,7 +572,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="42.3503143302112,41.7058831594395,50.2136588541667,9.568359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
